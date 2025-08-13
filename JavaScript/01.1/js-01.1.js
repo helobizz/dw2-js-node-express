@@ -27,4 +27,38 @@ function userMessage(user) {
   //${} -> template string/literal strings
   //é usado para inserir variáveis dentro de STRINGS(CRASE)
 }
-userMessage(user); //ARGUMENTO -> É O QUE EU ESTOU ENVIANDO PARA A FUNÇAÕ(PRECISA SER IGUAL)
+userMessage(user); //ARGUMENTO -> É O QUE EU ESTOU ENVIANDO PARA A FUNÇÃO(PRECISA SER IGUAL)
+
+//FUNÇÃO COM MAIS DE UM PARÂMETRO
+const n1 = 10;
+const n2 = 12;
+
+function mult(n1, n2) {
+  //quando eu declaro os parametros aqui, a função puxa daqui os valores, não das variaveis de cima
+  //ESSA FUNÇÃO RECEBE DOIS PARÂMETROS
+  let result = n1 * n2;
+  document.write(`a multiplicação de ${n1} e ${n2} é igual a ${result}`);
+}
+mult(n1, n2);
+
+// FUNÇÃO COM RETORNO (limito a responsabilidade da função)
+const num1 = 1000;
+const num2 = 5;
+
+function div(num1, num2) {
+  return num1 / num2;
+}
+document.write(
+  `<p>A divisão de ${num1} por ${num2} é igual a ${div(num1, num2)}.</p>`
+);
+
+//FUNÇÃO COM DIFERENTES RETORNOS (USA ESTRUTURA CONDICIONAL)
+const number = 5;
+function parImpar(number) {
+  if (number % 2 == 0) {
+    return "par";
+  } else {
+    return "ímpar";
+  }
+}
+document.write(`O número ${number} é <strong>${parImpar(number)}</strong>.`);
