@@ -22,7 +22,8 @@ const user = "Heloísa";
 
 function userMessage(user) {
   //Essa funçaõ agora recebe um paramêtro (o parâmetro é inserido dentro dos parênteses)
-  //não obrigatóriamente o nome do parâmetro precisa ser o mesmo da variável(eu tenho que usar o mesmo quando eu chamo a função), mas é uma boa prática(dentro da função eu teria que usar o mesmo do parÂmetro)
+  //não obrigatóriamente o nome do parâmetro precisa ser o mesmo da variável(eu tenho que 
+  // usar o mesmo quando eu chamo a função), mas é uma boa prática(dentro da função eu teria que usar o mesmo do parÂmetro)
   document.write(`<h3> O que deseja fazer hoje, ${user}?</h3>`);
   //${} -> template string/literal strings
   //é usado para inserir variáveis dentro de STRINGS(CRASE)
