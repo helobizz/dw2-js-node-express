@@ -24,19 +24,38 @@ listaClientes.forEach((cliente) => {
         `);
 });
 
-listaClientes.push(
-  {
-    nome: "Diego Max",
-    endereco: "Registro",
-    cpf: 90080070055,
-  });
+listaClientes.push({
+  nome: "Diego Max",
+  endereco: "Registro",
+  cpf: 90080070055,
+});
 
-document.write(`<h3>Esta é a lista atualizada com um novo cliente no final: </h3>`)
+document.write(
+  `<h3>Esta é a lista atualizada com um novo cliente no final: </h3>`
+);
 
 listaClientes.forEach((cliente) => {
-    document.write(`
+  document.write(`
         Nome: ${cliente.nome}<br>
         Endereço: ${cliente.endereco}<br>
         CPF: ${cliente.cpf}<br><br>
-        `)
-})
+        `);
+});
+
+listaClientes.unshift({
+  nome: "Bruno",
+  endereco: "Praia Grande",
+  cpf: 50040030077,
+});
+
+document.write(`
+  <h3>Esta é a lista atualizada com um novo cliente no começo:</h3>
+  `);
+
+listaClientes.forEach((cliente) => {
+  document.write(`
+        Nome: ${cliente.nome}<br>
+        Endereço: ${cliente.endereco}<br>
+        CPF: ${cliente.cpf}<br><br>
+        `);
+});

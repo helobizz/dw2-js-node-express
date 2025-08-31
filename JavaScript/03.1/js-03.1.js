@@ -28,9 +28,7 @@ class Carro {
 const carroPopular = new Carro("Fiat", "Uno", 2012); //instância nas propriedades
 
 document.write(`
-  <p>O carro ${carroPopular.marca} modelo ${carroPopular.modelo} é do ano de ${
-  carroPopular.ano
-}. Quando buzina faz ${carroPopular.buzinar()}</p>
+  <p>O carro ${carroPopular.marca} modelo ${carroPopular.modelo} é do ano de ${carroPopular.ano}. Quando buzina faz ${carroPopular.buzinar()}</p>
   `);
 
 //Objeto - carro esportivo
