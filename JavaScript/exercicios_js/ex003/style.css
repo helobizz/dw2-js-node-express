@@ -1,0 +1,22 @@
+#container {
+    background-color: rgb(182, 181, 181);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.divbutton {
+    position: absolute;
+    bottom: 10px;
+    
+}
