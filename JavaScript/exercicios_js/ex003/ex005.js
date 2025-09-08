@@ -17,6 +17,5 @@ document.write(`<p>
 </p>`);
 
 const data = new Date()
-data.setDate(data.getDate() + 12) //setDate(data.getDate() + 12) -> spma 12 dias
-document.write(`A encomenda chegará em: ${data.toLocaleDateString("pt-br")}`) 
-//.toLocaleDateString("pt-br") -> formata no padrão DD/MM/AAAA
+data.setDate(data.getDate() + 12)
+document.write(`<p>A encomenda chegará em: ${data.toLocaleDateString("pt-br")}</p>`) 
