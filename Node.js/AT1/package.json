@@ -1,0 +1,25 @@
+{
+  "name": "at1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helobizz/dw2-js-node-express.git#main"
+  },
+  "author": "Heloisa Vale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helobizz/dw2-js-node-express/issues"
+  },
+  "homepage": "https://github.com/helobizz/dw2-js-node-express/tree/main#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }, 
+  "type": "module"
+}
