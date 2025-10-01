@@ -1,11 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DramaCore</title>
-</head>
-<body>
-    bom dia
-</body>
-</html>
+<%- include ('partials/navbar.ejs') %>
+
+<h1 class="titulo">Bem-Vindo, Diego Max!</h1>
+
+<p>
+  Se você é apaixonado por histórias envolventes, personagens marcantes e
+  emoções intensas, está no lugar certo. Reunimos uma seleção especial com os 10
+  melhores doramas que conquistaram corações ao redor do mundo, trazendo tramas
+  de romance inesquecível, ação eletrizante e thrillers cheios de suspense.
+</p>
+<p>
+  Aqui você encontra indicações para todos os gostos: desde histórias que
+  aquecem o coração, até aquelas que vão te deixar na ponta da cadeira a cada
+  episódio. Nosso objetivo é ajudar você a descobrir (ou redescobrir) produções
+  incríveis que valem cada minuto da maratona.
+</p>
+<p>
+  Prepare a pipoca, escolha seu gênero favorito e mergulhe nesse universo
+  fascinante dos doramas!
+</p>
+
+<div class="d-flex justify-content-around flex-wrap gap-1">
+  <div class="card" style="width: 18rem">
+    <img src="/imgs/romance.jpg" class="card-img-top" alt="dorama de romance" />
+    <div class="card-body">
+      <h5 class="card-title">Romance</h5>
+      <p class="card-text">Confira aqui os principais títulos de romance!</p>
+      <a href="/romance" class="btn btn-primary">Clique Aqui!</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem">
+    <img src="/imgs/acao.png" class="card-img-top" alt="dorama de ação" />
+    <div class="card-body">
+      <h5 class="card-title">Ação</h5>
+      <p class="card-text">Confira aqui os principais títulos de ação!</p>
+      <a href="/acao" class="btn btn-primary">Clique Aqui!</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem">
+    <img src="/imgs/thriller.avif" class="card-img-top" alt="dorama thriller" />
+    <div class="card-body">
+      <h5 class="card-title">Thriller</h5>
+      <p class="card-text">Confira aqui os principais títulos de thriller!</p>
+      <a href="/thriller" class="btn btn-primary">Clique Aqui!</a>
+    </div>
+  </div>
+</div>

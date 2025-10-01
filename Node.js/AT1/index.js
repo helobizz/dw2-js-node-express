@@ -1,7 +1,15 @@
 import express from "express";
 const app = express();
 
+import AcaoController from "./controllers/AcaoController.js"
+import RomanceController from "./controllers/RomaceController.js"
+import ThrillerContoller from "./controllers/ThrillerController.js"
+
 app.set("view engine", "ejs");
+
+app.use("/", AcaoController)
+app.use("/", RomanceController)
+app.use("/", ThrillerContoller)
 
 app.use(express.static("public"));
 
