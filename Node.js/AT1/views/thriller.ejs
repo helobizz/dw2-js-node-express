@@ -1,0 +1,32 @@
+<%- include ('partials/navbar.ejs') %>
+<h1 class="titulo">Thriller</h1>
+
+<p class="text">
+  Se mistério e suspense são o que te prende, esta lista é para você. Logo
+  abaixo estão os melhores doramas de thriller, repletos de investigações,
+  segredos e reviravoltas surpreendentes.
+</p>
+<br />
+<table class="table table-bordered table-hover text-center w-75 mx-auto">
+  <thead class="table-primary">
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Onde assistir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- FOREACH -->
+    <% thriller.forEach(thriller => { %>
+    <tr>
+      <td><%= thriller.ranking %></td>
+      <td><%= thriller.nome %></td>
+      <td><%= thriller.assistir %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<br />
+<br />
+<a href="/" class="text">Voltar a página inicial</a>
+<%- include ('partials/footer.ejs') %>

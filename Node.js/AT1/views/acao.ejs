@@ -1,0 +1,32 @@
+<%- include ('partials/navbar.ejs') %>
+<h1 class="titulo">Ação</h1>
+
+<p class="text">
+  Para quem gosta de adrenalina e batalhas de tirar o fôlego, preparamos uma
+  lista com doramas de ação que vão manter você grudado(a) na tela. Confira
+  abaixo e escolha sua próxima maratona eletrizante.
+</p>
+<br />
+<table class="table table-bordered table-hover text-center w-75 mx-auto">
+  <thead class="table-primary">
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Onde assistir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- FOREACH-->
+    <% acao.forEach(acao => { %>
+    <tr>
+      <td><%= acao.ranking %></td>
+      <td><%= acao.nome %></td>
+      <td><%= acao.assistir %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<br>
+<br>
+<a href="/" class="text">Voltar a página inicial</a>
+<%- include ('partials/footer.ejs') %>

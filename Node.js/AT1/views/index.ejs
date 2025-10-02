@@ -2,39 +2,39 @@
 
 <h1 class="titulo">Bem-Vindo, Diego Max!</h1>
 
-<p>
+<p class="text">
   Se você é apaixonado por histórias envolventes, personagens marcantes e
   emoções intensas, está no lugar certo. Reunimos uma seleção especial com os 10
   melhores doramas que conquistaram corações ao redor do mundo, trazendo tramas
   de romance inesquecível, ação eletrizante e thrillers cheios de suspense.
 </p>
-<p>
+<p class="text">
   Aqui você encontra indicações para todos os gostos: desde histórias que
   aquecem o coração, até aquelas que vão te deixar na ponta da cadeira a cada
   episódio. Nosso objetivo é ajudar você a descobrir (ou redescobrir) produções
   incríveis que valem cada minuto da maratona.
 </p>
-<p>
+<p class="text">
   Prepare a pipoca, escolha seu gênero favorito e mergulhe nesse universo
   fascinante dos doramas!
 </p>
 
-<div class="d-flex justify-content-around flex-wrap gap-1">
-  <div class="card" style="width: 18rem">
-    <img src="/imgs/romance.jpg" class="card-img-top" alt="dorama de romance" />
-    <div class="card-body">
-      <h5 class="card-title">Romance</h5>
-      <p class="card-text">Confira aqui os principais títulos de romance!</p>
-      <a href="/romance" class="btn btn-primary">Clique Aqui!</a>
-    </div>
-  </div>
-
+<div class="cards">
   <div class="card" style="width: 18rem">
     <img src="/imgs/acao.png" class="card-img-top" alt="dorama de ação" />
     <div class="card-body">
       <h5 class="card-title">Ação</h5>
       <p class="card-text">Confira aqui os principais títulos de ação!</p>
-      <a href="/acao" class="btn btn-primary">Clique Aqui!</a>
+      <a href="/acao" class="btn btn-secondary">Clique Aqui!</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem">
+    <img src="/imgs/romance.jpg" class="card-img-top" alt="dorama de romance" />
+    <div class="card-body">
+      <h5 class="card-title">Romance</h5>
+      <p class="card-text">Confira aqui os principais títulos de romance!</p>
+      <a href="/romance" class="btn btn-secondary">Clique Aqui!</a>
     </div>
   </div>
 
@@ -43,7 +43,9 @@
     <div class="card-body">
       <h5 class="card-title">Thriller</h5>
       <p class="card-text">Confira aqui os principais títulos de thriller!</p>
-      <a href="/thriller" class="btn btn-primary">Clique Aqui!</a>
+      <a href="/thriller" class="btn btn-secondary">Clique Aqui!</a>
     </div>
   </div>
 </div>
+
+<%- include ('partials/footer.ejs') %>
