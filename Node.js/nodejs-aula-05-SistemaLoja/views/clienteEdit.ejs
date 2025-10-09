@@ -1,5 +1,4 @@
-<%- include ('partials/header.ejs') %>
-<%- include ('partials/navbar.ejs') %>
+<%- include ('partials/header.ejs') %> <%- include ('partials/navbar.ejs') %>
 
 <div class="container">
   <div class="card">
@@ -8,11 +7,13 @@
     </div>
     <div class="card-body">
       <!-- Formulário de edição -->
-      <form action="" method="post">
+      <form action="/clientes/update" method="post">
+        <input type="hidden" name="id" value="<%= cliente.id %>" />
+
         <label>Nome do cliente:</label>
         <input
           type="text"
-          name="nome"
+          name="nome"   
           placeholder="Insira o nome do cliente"
           class="form-control"
           value="<%= cliente.nome %>"
@@ -36,8 +37,15 @@
           value="<%= cliente.endereco %>"
           required
         />
-        <input type="submit" class="btn btn-success" value="Alterar" />
-        <input type="reset" class="btn btn-danger" value="Limpar" />
+        <input
+          onclick="return confirm ('Confirma as alterações realizadas para o(a) cliente <%= cliente.nome %>?')"
+          type="submit"
+          class="btn btn-warning"
+          value="Alterar"
+        />
+        <a href="/clientes">
+          <input type="button" class="btn btn-danger" value="Cancelar" />
+        </a>
       </form>
     </div>
   </div>
