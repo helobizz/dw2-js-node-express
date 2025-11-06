@@ -1,6 +1,13 @@
 import express from "express";
 const app = express();
 
+import connection from "./config/sequelize-config.js";
+
+// importando os Models
+import Romance from "./models/Romance.js";
+import Thriller from "./models/thriller.js";
+import Acao from "./models/acao.js";
+
 import AcaoController from "./controllers/AcaoController.js"
 import RomanceController from "./controllers/RomaceController.js"
 import ThrillerContoller from "./controllers/ThrillerController.js"
@@ -12,6 +19,20 @@ app.use("/", RomanceController)
 app.use("/", ThrillerContoller)
 
 app.use(express.static("public"));
+
+// Realizando conexão com o banco de dados
+connection.authenticate().then(() => {
+  console.log("Conexão com o banco de dados realizada com sucesso!");
+}).catch(error => {
+  console.log("error");
+});
+
+// Criando banco de dados(caso ainda não exista)
+connection.query(`CREATE DATABASE IF NOT EXISTS dramacore;`).then(() => {
+  console.log("O banco de dados está criado.");
+}).catch((error) => {
+  console.log(error);
+});
 
 app.get("/", (req, res) => {
   res.render("index");
