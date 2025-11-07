@@ -11,6 +11,8 @@ router.get("/acao", (req, res) => {
     res.render("acao", {
       acao: acao,
     });
+  }).catch(error => {
+    console.log(error)
   });
 });
 

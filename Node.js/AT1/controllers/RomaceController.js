@@ -11,6 +11,8 @@ router.get("/romance", (req, res) => {
     res.render("romance", {
       romance: romance,
     });
+  }).catch(error => {
+    console.log(error)
   });
 });
 

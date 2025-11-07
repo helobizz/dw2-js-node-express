@@ -6,10 +6,13 @@ const router = express.Router();
 import Thriller from "../models/thriller.js";
 
 router.get("/thriller", (req, res) => {
+  //SELECT * FROM THRILLER
   Thriller.findAll().then((thriller) => {
     res.render("thriller", {
       thriller: thriller,
     });
+  }).catch(error => {
+    console.log(error)
   });
 });
 
