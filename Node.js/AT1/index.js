@@ -12,6 +12,9 @@ import AcaoController from "./controllers/AcaoController.js"
 import RomanceController from "./controllers/RomaceController.js"
 import ThrillerContoller from "./controllers/ThrillerController.js"
 
+// CONFIGURANDO EXPRESS
+app.use(express.urlencoded({extended: false}))
+
 app.set("view engine", "ejs");
 
 app.use("/", AcaoController)

@@ -14,7 +14,7 @@
       <h1>Cadastrar dorama</h1>
     </div>
     <div class="card-body">
-      <form action="">
+      <form action="/romance/new" method="post">
         <label>Listagem:</label>
         <input type="text" name="top" placeholder="Insira a listagem do dorama" class="form-control" required>
         <label>Nome do dorama:</label>
@@ -35,6 +35,8 @@
       <th>#</th>
       <th>Nome</th>
       <th>Onde assistir</th>
+      <th>Editar</th>
+      <th>Excluir</th>
     </tr>
   </thead>
   <tbody>
@@ -44,6 +46,18 @@
       <td><%= romance.top %></td>
       <td><%= romance.nome %></td>
       <td><%= romance.onde %></td>
+      <td>
+        <button class="btn btn-warning">
+          Editar
+        </button>
+      </td>
+      <td>
+        <a href="/romance/delete/<%= romance.id %>">
+          <button onclick="return confirm('Deseja mesmo excluir o dorama <%= romance.nome %>')" class="btn btn-danger">
+            Excluir
+          </button>
+        </a>  
+      </td>
     </tr>
     <% }) %>
   </tbody>

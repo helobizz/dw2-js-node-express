@@ -1,0 +1,62 @@
+<%- include ('partials/navbar.ejs') %>
+<h1 class="titulo">Ação</h1>
+
+<p class="text">
+  Para quem gosta de adrenalina e batalhas de tirar o fôlego, preparamos uma
+  lista com doramas de ação que vão manter você grudado(a) na tela. Confira
+  abaixo e escolha sua próxima maratona eletrizante.
+</p>
+
+<!-- Formulário de edição -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>Alterar dorama</h1>
+    </div>
+    <div class="card-body">
+      <form action="/acao/update" method="post">
+        <input type="hidden" name="id" value="<%= acao.id %>" />
+
+        <label>Listagem:</label>
+        <input
+          type="text"
+          name="top"
+          placeholder="Insira a listagem do dorama"
+          class="form-control"
+          value="<%= acao.top %>"
+          required
+        />
+        <label>Nome do dorama:</label>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Insira o nome do dorama"
+          class="form-control"
+          value="<%= acao.nome %>"
+          required
+        />
+        <label>Onde assistir:</label>
+        <input
+          type="text"
+          name="onde"
+          placeholder="Insira onde assistir o dorama"
+          class="form-control mb-4"
+          value="<%= acao.onde %>"
+          required
+        />
+        <input
+          onclick="return confirm ('Confirma as alterações realizadas para o dorama <%= acao.nome %>?')"
+          type="submit"
+          class="btn btn-warning"
+          value="Alterar"
+        />
+        <a href="/acao">
+          <input type="button" class="btn btn-danger" value="Cancelar" />
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<a href="/" class="text">Voltar a página inicial</a>
+<%- include ('partials/footer.ejs') %>

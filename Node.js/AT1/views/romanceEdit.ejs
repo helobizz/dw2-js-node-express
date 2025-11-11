@@ -1,0 +1,61 @@
+<%- include ('partials/navbar.ejs')%>
+<h1 class="titulo">Romance</h1>
+
+<p class="text">
+  Nada melhor do que um bom dorama para aquecer o coração, não é? Abaixo você
+  encontra nossa seleção especial de romances que vão te conquistar com
+  histórias emocionantes, cheias de encontros inesperados e finais marcantes.
+</p>
+
+<!-- Formulário de edição -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>Editar dorama</h1>
+    </div>
+    <div class="card-body">
+      <form action="/romance/update" method="post">
+        <input type="hidden" name="id" value="<%= romance.id %>" />
+        <label>Listagem:</label>
+        <input
+          type="text"
+          name="top"
+          placeholder="Insira a listagem do dorama"
+          class="form-control"
+          value="<%= romance.top %>"
+          required
+        />
+        <label>Nome do dorama:</label>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Insira o nome do doarama"
+          class="form-control"
+          value="<%= romance.nome %>"
+          required
+        />
+        <label>Onde assistir:</label>
+        <input
+          type="text"
+          name="onde"
+          placeholder="Insira onde assistir o dorama"
+          class="form-control mb-4"
+          value="<%= romance.onde %>"
+          required
+        />
+        <input
+          onclick="return confirm('Confirma as alterações realizadas para o dorama <%= romance.nome %>?')"
+          type="submit"
+          class="btn btn-warning"
+          value="Alterar"
+        />
+        <a href="/romance">
+          <input type="button" class="btn btn-danger" value="Cancelar" />
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<a href="/" class="text">Voltar a página inicial</a>
+<%- include ('partials/footer.ejs') %>
