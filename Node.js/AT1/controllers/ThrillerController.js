@@ -46,4 +46,27 @@ router.get("/thriller/delete/:id", (req, res) => {
   });
 });
 
+// ROTA DE EDIÇÃO
+router.get("/thriller/edit/:id", (req, res) => {
+  const id = req.params.id
+  Thriller.findByPk(id).then((thriller) => {
+    res.render("ThrillerEdit", {
+      thriller: thriller,
+    });
+  });
+});
+
+// ROTA DE ALTERAÇÃO
+router.post("/thriller/update", (req, res) => {
+  const id = req.body.id;
+  const top = req.body.top;
+  const nome = req.body.nome;
+  const onde = req.body.onde;
+  Thriller.update({
+    top: top,
+    nome: nome,
+    onde: onde,
+  })
+})
+
 export default router;

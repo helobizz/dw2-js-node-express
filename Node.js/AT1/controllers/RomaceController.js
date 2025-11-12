@@ -56,7 +56,7 @@ router.get("/romance/delete/:id", (req, res) => {
 router.get("/romance/edit/:id", (req, res) => {
   const id = req.params.id;
   Romance.findByPk(id).then((romance) => {
-    res.render("RomanceEdit", {
+    res.render("romanceEdit", {
       romance: romance,
     });
   });

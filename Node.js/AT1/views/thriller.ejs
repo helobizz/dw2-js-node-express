@@ -47,9 +47,11 @@
       <td><%= thriller.nome %></td>
       <td><%= thriller.onde %></td>
       <td>
-        <button class="btn btn-warning">
-          Editar
-        </button>
+        <a href="/thriller/edit/<%= thriller.id %>">
+          <button class="btn btn-warning">
+            Editar
+          </button>
+        </a>
       </td>
       <td>
         <a href="/thriller/delete/<%= thriller.id %>">

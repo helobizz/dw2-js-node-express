@@ -1,0 +1,55 @@
+<%- include ('partials/navbar.ejs') %>
+<h1 class="titulo">Thriller</h1>
+
+<p class="text">
+  Se mistério e suspense são o que te prende, esta lista é para você. Logo
+  abaixo estão os melhores doramas de thriller, repletos de investigações,
+  segredos e reviravoltas surpreendentes.
+</p>
+
+<!-- Formulário de Edição -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>Alterar dorama</h1>
+    </div>
+    <div class="card-body">
+      <form action="/thriller/update" method="post">
+        <input type="hidden" name="id" value="<%= thriller.id %>">
+
+        <label>Listagem:</label>
+        <input
+          type="text"
+          name="top"
+          placeholder="Insira a listagem do dorama"
+          class="form-control"
+          value="<%= thriller.top %>"
+          required
+        />
+        <label>Nome do dorama</label>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Insira o nome do dorama"
+          class="form-control"
+          value="<%= thriller.nome %>"
+          required
+        />
+        <label>Onde assistir:</label>
+        <input
+          type="text"
+          name="onde"
+          placeholder="Insira onde assistir o dorama"
+          class="form-control mb-4 required"
+          value="<%= thriller.onde %>"
+          required
+        />
+        <input onclick="return confirm ('Confirma as alterações realizadas para o dorama <%= thriller.nome %>?')" type="submit" class="btn btn-warning" value="Alterar">
+        <input type="button" class="btn btn-danger" value="Cancelar">
+      </form>
+    </div>
+  </div>
+</div>
+
+<a href="/" class="text">Voltar a página inicial</a>
+<%- include ('partials/footer.ejs') %>

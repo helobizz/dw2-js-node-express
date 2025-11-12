@@ -47,9 +47,11 @@
       <td><%= romance.nome %></td>
       <td><%= romance.onde %></td>
       <td>
-        <button class="btn btn-warning">
-          Editar
-        </button>
+        <a href="/romance/edit/<%= romance.id %>">
+          <button class="btn btn-warning">
+           Editar
+          </button>
+        </a>
       </td>
       <td>
         <a href="/romance/delete/<%= romance.id %>">
