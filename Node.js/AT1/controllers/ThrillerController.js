@@ -66,7 +66,14 @@ router.post("/thriller/update", (req, res) => {
     top: top,
     nome: nome,
     onde: onde,
-  })
-})
+  }, 
+  {
+    where: {id: id},
+  }).then(() => {
+    res.redirect("/thriller");
+  }).catch((error) => {
+    console.log(error);
+  });
+});
 
 export default router;
